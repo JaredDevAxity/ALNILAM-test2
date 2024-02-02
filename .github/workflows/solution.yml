@@ -1,0 +1,17 @@
+name: Java SpringBoot CI
+run-name: Construyendo ALNILAM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ALNILAM:
+    uses: JaredDevAxity/AR_26_A_ARCHERNAR_ACTIONS/.github/workflows/compileALNILAM.yml@main
+    with:   
+      node-version: '20'   
+      java-version: '11'  
+      path-base: 'backend'
+      name-service: 'hub'
+    secrets: inherit    
